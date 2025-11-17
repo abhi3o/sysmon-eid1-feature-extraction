@@ -1,6 +1,8 @@
+# Sysmon Event ID 1 Feature Extraction
 Extracting features from Sysmon Event ID 1 (Process Create) logs to classify processes as anomalous or benign to support research in behavioral detection and early-stage anomaly identification.
 
-Description of extracted features:
+
+**Description of extracted features:**
 
 **Feature 1**: The first feature we extract is the parent of the process from the parent executable. For any given child process, in a normal environment, the parent is a single process which usually spawns the same child. Since this is a categorical feature, we utilise the one-hot encoded values of the parent.
 
