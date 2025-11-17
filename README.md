@@ -1,6 +1,7 @@
 Extracting features from Sysmon Event ID 1 (Process Create) logs to classify processes as anomalous or benign to support research in behavioral detection and early-stage anomaly identification.
 
 Description of extracted features:
+
 **Feature 1**: The first feature we extract is the parent of the process from the parent executable. For any given child process, in a normal environment, the parent is a single process which usually spawns the same child. Since this is a categorical feature, we utilise the one-hot encoded values of the parent.
 
 **Feature 2**: Here, we use Term Frequency-Inverse Document Frequency (TF-IDF) featurizer to obtain features generated from the word description of the process. Description contains an additional information about the process executable, and it is oservered that it is only written by reputable software vendors for their software.
